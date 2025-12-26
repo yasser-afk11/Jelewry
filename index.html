@@ -240,9 +240,29 @@
         </div>
     </div>
     
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+      <script>
+        (function() {
+            const script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js';
+            script.onload = function() {
+                console.log('✅ Supabase loaded successfully');
+                console.log('Supabase type:', typeof supabase);
+                
+                // Now load your main script
+                const mainScript = document.createElement('script');
+                mainScript.src = 'indexScript.js';
+                document.body.appendChild(mainScript);
+            };
+            script.onerror = function() {
+                console.error('❌ Failed to load Supabase');
+                alert('Failed to load Supabase library. Check internet connection.');
+            };
+            document.body.appendChild(script);
+        })();
+    </script>
     <script src="indexScript.js"></script>
 
 </body>
 
 </html>
+
