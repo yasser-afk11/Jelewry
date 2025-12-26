@@ -87,7 +87,7 @@
         const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBxd3l3cWpycXhicWpkb2FkemN0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjY2OTQ5MzYsImV4cCI6MjA4MjI3MDkzNn0.OXNKTNj8ru8hNphmZZOs9wuMjA64jNPMO4Grt-JPUHc";
         
         // Load Supabase client
-        const supabase = window.supabase;
+      
         
         // ========== FORM SUBMISSION ==========
         orderForm.addEventListener('submit', async (e) => {
@@ -288,17 +288,7 @@
             }
         });
         
-        // Load Supabase
-        (function() {
-            const script = document.createElement('script');
-            script.src = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js';
-            script.onload = function() {
-                console.log('💎 Supabase loaded');
-                console.log('Type "openAdmin()" to login');
-            };
-            document.head.appendChild(script);
-        })();
-
+   
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
@@ -314,4 +304,5 @@
             });
         });
     
+
 
