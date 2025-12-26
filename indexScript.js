@@ -1,4 +1,4 @@
-<script>
+
         // Mobile Navigation Toggle
         const mobileToggle = document.querySelector('.mobile-toggle');
         const nav = document.querySelector('nav');
@@ -313,4 +313,5 @@
                 }
             });
         });
-    </script>
+    
+
